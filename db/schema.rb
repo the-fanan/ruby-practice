@@ -13,8 +13,9 @@
 ActiveRecord::Schema.define(version: 2021_06_30_195659) do
 
   create_table "people", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password", null: false
     t.string "public_id"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
@@ -22,11 +23,11 @@ ActiveRecord::Schema.define(version: 2021_06_30_195659) do
   end
 
   create_table "relations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.bigint "person_id"
-    t.bigint "relation_id"
-    t.string "type"
+    t.bigint "person_id", null: false
+    t.bigint "relation_id", null: false
+    t.string "type", null: false
     t.string "status", default: "unverified"
-    t.string "public_id"
+    t.string "public_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
