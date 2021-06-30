@@ -33,3 +33,4 @@
 /config/master.key
 
 /docker/mysql
+**/**.DS_Store
