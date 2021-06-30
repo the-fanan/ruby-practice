@@ -1,8 +1,8 @@
-FROM ruby:3.0.1
+FROM ruby:3.0.0
 
 WORKDIR /app
 COPY . /app
-RUN bundle update --bundler
+#RUN bundle update --bundler
 RUN bundle install
 
 # Install Yarn.

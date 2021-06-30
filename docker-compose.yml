@@ -15,7 +15,7 @@ services:
       - redis
       - mysql
     volumes:
-      - .:/code:cached
+      - .:/app:cached
     ports:
       - "3000:3000"
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
