@@ -13,5 +13,18 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :people, [Types::PersonType], null: false,
+      description: "People in the system"
+
+    def people
+      Person.all
+    end 
+
+    field :person, Type::PersonType, null: false,
+      description: "A person in the system"
+    
+    def person 
+    end
   end
 end
